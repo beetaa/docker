@@ -13,7 +13,8 @@ RUN \
   apt-get install -y software-properties-common && \
   apt-get install -y curl git unzip vim wget && \
   apt-get install -y python python-pip && \
-  rm -rf /var/lib/apt/lists/
+  apt-get -y clean && \
+  rm -rf /tmp/* && rm -rf /var/tmp/* && rm -rf /var/lib/apt/lists/*
 
 # 用户使用设置
 
