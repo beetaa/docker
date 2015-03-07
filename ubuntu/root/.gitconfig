@@ -1,2 +1,3 @@
-user.name=beetaa
-user.email=beetaa@outlook.com
+[user]
+	name = beetaa
+	email = beetaa@outlook.com
