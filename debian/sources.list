@@ -1,0 +1,17 @@
+# 
+
+# deb cdrom:[Debian GNU/Linux 7.8.0 _Wheezy_ - Official amd64 NETINST Binary-1 20150110-14:41]/ wheezy main
+
+#deb cdrom:[Debian GNU/Linux 7.8.0 _Wheezy_ - Official amd64 NETINST Binary-1 20150110-14:41]/ wheezy main
+
+deb http://ftp.cn.debian.org/debian/ wheezy main
+deb-src http://ftp.cn.debian.org/debian/ wheezy main
+
+deb http://security.debian.org/ wheezy/updates main
+deb-src http://security.debian.org/ wheezy/updates main
+
+# wheezy-updates, previously known as 'volatile'
+deb http://ftp.cn.debian.org/debian/ wheezy-updates main
+deb-src http://ftp.cn.debian.org/debian/ wheezy-updates main
+
+deb http://http.debian.net/debian wheezy-backports main
