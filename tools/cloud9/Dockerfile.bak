@@ -7,9 +7,10 @@ RUN \
 
 WORKDIR /cloud9
 
-RUN apt-get install -y tmux curl
+RUN apt-get install -y tmux 
 
 RUN \
+   git checkout a356105c7914d57505eb066f3b7e469951c6aaad && \
    scripts/install-sdk.sh && \
    rm -rf /tmp/* && rm -rf /var/tmp/* && \
    npm cache clear && \
