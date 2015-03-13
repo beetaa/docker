@@ -8,8 +8,7 @@ RUN apt-get update && apt-get install -y wget && \
 
 WORKDIR  /stackedit-4.3.11
 
-RUN npm install && \
-    node_modules/bower/bin/bower install --allow-root --production --config.interactive=false
+RUN npm install
 
 EXPOSE 3000
 
