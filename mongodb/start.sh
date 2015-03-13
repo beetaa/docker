@@ -1,0 +1,1 @@
+mongod --dbpath /data/mongodb/ --logpath /data/mongodb/mongodb.log --logappend --rest --httpinterface
