@@ -1,11 +1,11 @@
-FROM beetaa/debian:latest
+FROM debian:wheezy
 
 RUN \
    apt-get update && \
    apt-get install -y vsftpd && \
    apt-get clean
 
-ENV FTP_DIR /var/workspace
+ENV FTP_DIR /var/ftp
 
 RUN \
    echo "local_enable=YES" >> /etc/vsftpd.conf && \
