@@ -25,10 +25,23 @@ vxuepai
       └─ cdn                          js css img
 
 xlab
-  └─ docker
-  └─ river
-  └─ faker
+  └─ docker                           docker 容器配置
+  └─ cattle                           老牛，网络内容抓取库
+  └─ fakery                           虚拟数据生成器
 
+```
+
+# 网盘路径
+
+```
+/mnt
+  └─ b                                系统赠送的20G，用于抓取内容暂存
+      └─ crawler
+  └─ hgfs                             自购的30G
+      └─ ftp
+      └─ workspace
+  └─ hub                              独立网盘5G
+      └─ repos
 ```
 
 # 环境配置
@@ -44,3 +57,15 @@ xlab
 
 4. **couchdb** - 端口 **5984** | **6984** - 目录 ``/mnt/hgfs/workspace/data/couchdb`` 和 ``/mnt/hgfs/workspace/data/couchdb/log``
 > ``docker run -d -p 5984:5984 -p 6984:6984 -v /mnt/hgfs/workspace/data/couchdb:/usr/local/var/lib/couchdb -v /mnt/hgfs/workspace/data/couchdb/log:/usr/local/var/log/couchdb --name couchdb beetaa/couchdb``
+
+5. **coming soon 页面** - 端口 **80** - 目录 ``/mnt/hgfs/workspace/vxuepai/pub/web/_coming``
+> ``docker run -d -p 80:80 -v /mnt/hgfs/workspace/vxuepai/pub/web/_coming:/usr/share/nginx/html --name coming nginx``
+
+6. **OSS 存储** - 端口 **8011** - 目录 ``/mnt/hgfs/workspace/vxuepai/pub/oss``
+> ``docker run -d -p 8011:80 -v /mnt/hgfs/workspace/vxuepai/pub/oss:/usr/share/nginx/html --name oss nginx``
+
+7. **CDN 静态文件服务** - 端口 **8022** - 目录 ``/mnt/hgfs/workspace/vxuepai/pub/cdn``
+> ``docker run -d -p 8022:80 -v /mnt/hgfs/workspace/vxuepai/pub/cdn:/usr/share/nginx/html --name cdn nginx``
+
+6. **cloud9** - 端口 **8181** - 目录 ``/mnt/hgfs/workspace/vxuepai``
+> ``docker run -d -p 8181:8181 -v /mnt/hgfs/workspace/vxuepai:/workspace --name cloud9 beetaa/cloud9``

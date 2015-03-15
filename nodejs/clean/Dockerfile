@@ -1,4 +1,4 @@
-FROM beetaa/debian
+FROM debian:wheezy
 
 RUN \
    apt-get update && \
