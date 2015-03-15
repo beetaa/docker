@@ -12,6 +12,9 @@ WORKDIR /app
 
 # puer 缺省端口
 EXPOSE 8000
+# prez 端口
+EXPOSE 9000
+EXPOSE 35729
 # 一般程序缺省端口
 EXPOSE 3000
 

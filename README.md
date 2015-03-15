@@ -67,5 +67,8 @@ xlab
 7. **CDN 静态文件服务** - 端口 **8022** - 目录 ``/mnt/hgfs/workspace/vxuepai/pub/cdn``
 > ``docker run -d -p 8022:80 -v /mnt/hgfs/workspace/vxuepai/pub/cdn:/usr/share/nginx/html --name cdn nginx``
 
-6. **cloud9** - 端口 **8181** - 目录 ``/mnt/hgfs/workspace/vxuepai``
+8. **PPT 在线展示** - 端口 **9000** ｜ **35729** - 目录 ``/mnt/hgfs/workspace/vxuepai/pub/ppt``
+> ``docker run -d -p 9000:9000 -p 35729:35729 -v /mnt/hgfs/workspace/vxuepai/pub/ppt:/app --name ppt beetaa/nodejs:run prez --serve --watch --no-open-browser``
+
+8. **cloud9** - 端口 **8181** - 目录 ``/mnt/hgfs/workspace/vxuepai``
 > ``docker run -d -p 8181:8181 -v /mnt/hgfs/workspace/vxuepai:/workspace --name cloud9 beetaa/cloud9``
