@@ -70,5 +70,11 @@ xlab
 8. **PPT 在线展示** - 端口 **9000** ｜ **35729** - 目录 ``/mnt/hgfs/workspace/vxuepai/pub/ppt``
 > ``docker run -d -p 9000:9000 -p 35729:35729 -v /mnt/hgfs/workspace/vxuepai/pub/ppt:/app --name ppt beetaa/nodejs:run prez --serve --watch --no-open-browser``
 
+9. **WEB 开发页面** - 端口 **8100** - 目录 ``/mnt/hgfs/workspace/vxuepai/pub/web``
+> ``docker run -d -p 8100:8000 -v /mnt/hgfs/workspace/vxuepai/pub/web:/app --name web beetaa/nodejs:run puer``
+
+10. **手机客户端开发页面** - 端口 **8000** - 目录 ``/mnt/hgfs/workspace/vxuepai/pub/app/phone``
+> ``docker run -d -p 8000:8000 -v /mnt/hgfs/workspace/vxuepai/pub/app/phone:/app --name phone beetaa/nodejs:run puer``
+
 8. **cloud9** - 端口 **8181** - 目录 ``/mnt/hgfs/workspace/vxuepai``
 > ``docker run -d -p 8181:8181 -v /mnt/hgfs/workspace/vxuepai:/workspace --name cloud9 beetaa/cloud9``
