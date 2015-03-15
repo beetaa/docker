@@ -8,4 +8,6 @@ RUN \
    npm cache clear && \
    rm -rf /tmp/* && rm -rf /var/tmp/* && rm -rf /var/lib/apt/list/*
 
+EXPOSE 3000
+
 CMD ["bash"]
