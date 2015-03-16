@@ -78,3 +78,6 @@ xlab
 
 8. **cloud9** - 端口 **8181** - 目录 ``/mnt/hgfs/workspace/vxuepai``
 > ``docker run -d -p 8181:8181 -v /mnt/hgfs/workspace/vxuepai:/workspace --name cloud9 beetaa/cloud9``
+
+11. **dockerui** - 端口 **9001** - 目录 ``无``
+> ``docker run -d -p 9001:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock dockerui/dockerui``
