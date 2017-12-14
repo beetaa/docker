@@ -1,10 +1,7 @@
-FROM beetaa/nodejs:clean
+FROM node:slim
 
 RUN \
-   apt-get update && \
-   apt-get install -y build-essential && \
-   npm install -g gulp mocha forever nodemon puer mongoose redis && \
-   apt-get clean && \
+   npm install -g nodemon && \
    npm cache clear && \
    rm -rf /tmp/* && rm -rf /var/tmp/* && rm -rf /var/lib/apt/list/*
 
